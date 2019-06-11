@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+    <head>
+        <title>wordcount</title>
+        <meta name="viewport" content="width=device-width, user-scalable=no">
+        <link href="https://fonts.googleapis.com/css?family=Gaegu&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="style1.css">
+        <style>
+            body {
+              background-color: rgb(242, 253, 219);
+            }
+            
+            h1 {
+              color: blue;
+              
+              font-family: 'Gaegu', cursive;
+              text-align: center
+             
+            } 
+            h2{ 
+                color: red;
+              margin-top: 20px;
+              font-family: "Comic Sans MS", cursive, sans-serif;
+              text-align: center ;
+              font-family: Arial, Helvetica, sans-serif;
+            
+             
+
+            }
+            a { 
+                color: black;
+                font-family: Arial, Helvetica, sans-serif;
+                text-align: center;
+                position:  static;
+                margin-left: 520px;
+                }
+            
+            .form-control{
+                  
+                  text-align:center;
+                }
+            textarea{
+              border-radius: 5px;
+            }
+            img{
+                    width: 500px;
+                    height: 300px;
+                    text-indent: -9999px;
+                    display: block; margin: 0px auto ;
+                    }
+            </style>
+    </head>
+    <body>
+        <div class="intro">
+            <h1>안녕하세요, 여기서 졸라게 글자를 치세요!</h1>
+        </div>
+        
+        <h2><strong>욕설 금지!</strong>  </h2>
+        <a class=url href="{%url 'about'%}">ABOUT</a>
+        
+        <br>
+        <img class="b" src="https://withmon.com/wp-content/uploads/2017/01/typing.jpg"/>
+        <br>
+        
+        
+        <form class="form-control" action="{%url 'result'%}">
+        <textarea cols="40" rows="10" name="fulltext">
+
+        </textarea>
+        <br>
+        <input type="submit" value="Count!">
+        </form>
+    </body>
+    </html>

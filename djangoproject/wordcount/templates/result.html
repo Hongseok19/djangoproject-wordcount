@@ -1,0 +1,70 @@
+<head>
+        <link href="https://fonts.googleapis.com/css?family=Jua&display=swap" rel="stylesheet">
+    <style>
+        h2{
+            text-align: center;
+        }
+        h1{
+            font-family: 'Jua', sans-serif;
+            text-align: center;
+        }
+        .text{
+            border: 2px dotted gray;
+            margin: 0px auto;
+            position: relative;
+            width: 500px;
+            height: 350px;
+            border-radius: 5px;
+            text-align: center;
+        }
+            
+            
+        .words{
+            border: 2px solid skyblue;
+            margin: 0px auto;
+            position: relative;
+            width: 500px;
+            height: 300px;
+            border-radius: 5px; 
+            margin-top: 30px;
+            text-align: center;
+            
+        }
+        
+        a{
+            font-family: 'Poor Story', cursive; 
+            text-align: center;
+            color: blue;
+        }
+        body{
+            background-color: whitesmoke;
+            
+        }
+        
+        
+        .inline{
+            display: inline-block; 
+        }
+    </style>
+</head>
+<body>
+<h1>당신이 입력한 텍스트는 {{total}} 로 구성되어 있습니다.</h1>
+
+ 
+<br>
+<!-- <div class="hey"> -->
+<div class="text"  class="hey"><h2> 입력한 텍스트: </h2>
+{{full}}</div>
+
+<div class="words" class="hey"><h2> 단어 카운트: </h2>
+<div class="inline">{% for word, howmany in dictionary%}
+
+{{word}} : {{howmany}} &nbsp;&nbsp;
+
+
+{%endfor%}
+</div>
+</div>
+<!-- </div> -->
+</body>
+<a href="{%url 'home' %}"><h4>다시하기</h4></a>
